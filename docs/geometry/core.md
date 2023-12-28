@@ -1,3 +1,3 @@
 ## Position
 
-:::supervision.geometry.core.Position
+:::super.geometry.core.Position

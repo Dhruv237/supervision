@@ -1,3 +1,3 @@
 ## InferenceSlicer
 
-:::supervision.detection.tools.inference_slicer.InferenceSlicer
+:::super.detection.tools.inference_slicer.InferenceSlicer

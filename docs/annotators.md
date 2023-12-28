@@ -1,7 +1,7 @@
 === "BoundingBox"
 
     ```python
-    >>> import supervision as sv
+    >>> import super as sv
 
     >>> image = ...
     >>> detections = sv.Detections(...)
@@ -22,7 +22,7 @@
 === "BoxCorner"
 
     ```python
-    >>> import supervision as sv
+    >>> import super as sv
 
     >>> image = ...
     >>> detections = sv.Detections(...)
@@ -43,7 +43,7 @@
 === "Color"
 
     ```python
-    >>> import supervision as sv
+    >>> import super as sv
 
     >>> image = ...
     >>> detections = sv.Detections(...)
@@ -64,7 +64,7 @@
 === "Circle"
 
     ```python
-    >>> import supervision as sv
+    >>> import super as sv
 
     >>> image = ...
     >>> detections = sv.Detections(...)
@@ -85,7 +85,7 @@
 === "Dot"
 
     ```python
-    >>> import supervision as sv
+    >>> import super as sv
 
     >>> image = ...
     >>> detections = sv.Detections(...)
@@ -106,7 +106,7 @@
 === "Triangle"
 
     ```python
-    >>> import supervision as sv
+    >>> import super as sv
 
     >>> image = ...
     >>> detections = sv.Detections(...)
@@ -127,7 +127,7 @@
 === "Ellipse"
 
     ```python
-    >>> import supervision as sv
+    >>> import super as sv
 
     >>> image = ...
     >>> detections = sv.Detections(...)
@@ -148,7 +148,7 @@
 === "Halo"
 
     ```python
-    >>> import supervision as sv
+    >>> import super as sv
 
     >>> image = ...
     >>> detections = sv.Detections(...)
@@ -169,7 +169,7 @@
 === "Mask"
 
     ```python
-    >>> import supervision as sv
+    >>> import super as sv
 
     >>> image = ...
     >>> detections = sv.Detections(...)
@@ -190,7 +190,7 @@
 === "Polygon"
 
     ```python
-    >>> import supervision as sv
+    >>> import super as sv
 
     >>> image = ...
     >>> detections = sv.Detections(...)
@@ -211,7 +211,7 @@
 === "Label"
 
     ```python
-    >>> import supervision as sv
+    >>> import super as sv
 
     >>> image = ...
     >>> detections = sv.Detections(...)
@@ -232,7 +232,7 @@
 === "Blur"
 
     ```python
-    >>> import supervision as sv
+    >>> import super as sv
 
     >>> image = ...
     >>> detections = sv.Detections(...)
@@ -253,7 +253,7 @@
 === "Pixelate"
 
     ```python
-    >>> import supervision as sv
+    >>> import super as sv
 
     >>> image = ...
     >>> detections = sv.Detections(...)
@@ -274,7 +274,7 @@
 === "Trace"
 
     ```python
-    >>> import supervision as sv
+    >>> import super as sv
     >>> from ultralytics import YOLO
 
     >>> model = YOLO('yolov8x.pt')
@@ -305,7 +305,7 @@
 === "HeatMap"
 
     ```python
-    >>> import supervision as sv
+    >>> import super as sv
     >>> from ultralytics import YOLO
 
     >>> model = YOLO('yolov8x.pt')
@@ -333,64 +333,64 @@
 
 ## BoundingBoxAnnotator
 
-:::supervision.annotators.core.BoundingBoxAnnotator
+:::super.annotators.core.BoundingBoxAnnotator
 
 ## BoxCornerAnnotator
 
-:::supervision.annotators.core.BoxCornerAnnotator
+:::super.annotators.core.BoxCornerAnnotator
 
 ## ColorAnnotator
 
-:::supervision.annotators.core.ColorAnnotator
+:::super.annotators.core.ColorAnnotator
 
 ## CircleAnnotator
 
-:::supervision.annotators.core.CircleAnnotator
+:::super.annotators.core.CircleAnnotator
 
 ## DotAnnotator
 
-:::supervision.annotators.core.DotAnnotator
+:::super.annotators.core.DotAnnotator
 
 ## TriangleAnnotator
 
-:::supervision.annotators.core.TriangleAnnotator
+:::super.annotators.core.TriangleAnnotator
 
 ## EllipseAnnotator
 
-:::supervision.annotators.core.EllipseAnnotator
+:::super.annotators.core.EllipseAnnotator
 
 ## HaloAnnotator
 
-:::supervision.annotators.core.HaloAnnotator
+:::super.annotators.core.HaloAnnotator
 
 ## HeatMapAnnotator
 
-:::supervision.annotators.core.HeatMapAnnotator
+:::super.annotators.core.HeatMapAnnotator
 
 ## MaskAnnotator
 
-:::supervision.annotators.core.MaskAnnotator
+:::super.annotators.core.MaskAnnotator
 
 ## PolygonAnnotator
 
-:::supervision.annotators.core.PolygonAnnotator
+:::super.annotators.core.PolygonAnnotator
 
 ## LabelAnnotator
 
-:::supervision.annotators.core.LabelAnnotator
+:::super.annotators.core.LabelAnnotator
 
 ## BlurAnnotator
 
-:::supervision.annotators.core.BlurAnnotator
+:::super.annotators.core.BlurAnnotator
 
 ## PixelateAnnotator
 
-:::supervision.annotators.core.PixelateAnnotator
+:::super.annotators.core.PixelateAnnotator
 
 ## TraceAnnotator
 
-:::supervision.annotators.core.TraceAnnotator
+:::super.annotators.core.TraceAnnotator
 
 ## ColorLookup
 
-:::supervision.annotators.utils.ColorLookup
+:::super.annotators.utils.ColorLookup

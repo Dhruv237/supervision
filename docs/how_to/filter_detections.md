@@ -47,7 +47,7 @@ Allows you to select detections that belong only to selected set of classes.
 
     ```python
     import numpy as np
-    import supervision as sv
+    import super as sv
 
     selected_classes = [0, 2, 3]
     detections = sv.Detections(...)
@@ -64,7 +64,7 @@ Allows you to select detections that belong only to selected set of classes.
 
     ```python
     import numpy as np
-    import supervision as sv
+    import super as sv
 
     class_id = [0, 2, 3]
     detections = sv.Detections(...)
@@ -84,7 +84,7 @@ Allows you to select detections with specific confidence value, for example high
 === "After"
 
     ```python
-    import supervision as sv
+    import super as sv
 
     detections = sv.Detections(...)
     detections = detections[detections.confidence > 0.5]
@@ -99,7 +99,7 @@ Allows you to select detections with specific confidence value, for example high
 === "Before"
 
     ```python
-    import supervision as sv
+    import super as sv
 
     detections = sv.Detections(...)
     detections = detections[detections.confidence > 0.5]
@@ -119,7 +119,7 @@ detection in the image. In the example below, we have sifted out the detections 
 === "After"
 
     ```python
-    import supervision as sv
+    import super as sv
 
     detections = sv.Detections(...)
     detections = detections[detections.area > 1000]
@@ -134,7 +134,7 @@ detection in the image. In the example below, we have sifted out the detections 
 === "Before"
 
     ```python
-    import supervision as sv
+    import super as sv
 
     detections = sv.Detections(...)
     detections = detections[detections.area > 1000]
@@ -156,7 +156,7 @@ occupied by them. In the example below, we remove too large detections.
 === "After"
 
     ```python
-    import supervision as sv
+    import super as sv
 
     image = ...
     height, width, channels = image.shape
@@ -175,7 +175,7 @@ occupied by them. In the example below, we remove too large detections.
 === "Before"
 
     ```python
-    import supervision as sv
+    import super as sv
 
     image = ...
     height, width, channels = image.shape
@@ -200,7 +200,7 @@ simple and fast.
 === "After"
 
     ```python
-    import supervision as sv
+    import super as sv
 
     detections = sv.Detections(...)
     w = detections.xyxy[:, 2] - detections.xyxy[:, 0]
@@ -217,7 +217,7 @@ simple and fast.
 === "Before"
 
     ```python
-    import supervision as sv
+    import super as sv
 
     detections = sv.Detections(...)
     w = detections.xyxy[:, 2] - detections.xyxy[:, 0]
@@ -239,7 +239,7 @@ zone. In the example below you can see how to filter out all detections located 
 === "After"
 
     ```python
-    import supervision as sv
+    import super as sv
 
     zone = sv.PolygonZone(...)
     detections = sv.Detections(...)
@@ -256,7 +256,7 @@ zone. In the example below you can see how to filter out all detections located 
 === "Before"
 
     ```python
-    import supervision as sv
+    import super as sv
 
     zone = sv.PolygonZone(...)
     detections = sv.Detections(...)
@@ -277,7 +277,7 @@ zone. In the example below you can see how to filter out all detections located 
 === "After"
 
     ```python
-    import supervision as sv
+    import super as sv
 
     zone = sv.PolygonZone(...)
     detections = sv.Detections(...)
@@ -294,7 +294,7 @@ zone. In the example below you can see how to filter out all detections located 
 === "Before"
 
     ```python
-    import supervision as sv
+    import super as sv
 
     zone = sv.PolygonZone(...)
     detections = sv.Detections(...)

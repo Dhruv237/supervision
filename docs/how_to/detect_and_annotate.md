@@ -19,7 +19,7 @@ Now that we have predictions from a model, we can load them into Supervision. We
 ```python
 import cv2
 from ultralytics import YOLO
-import supervision as sv
+import super as sv
 
 model = YOLO("yolov8n.pt")
 image = cv2.imread("image.jpg")
@@ -45,7 +45,7 @@ Finally, we can annotate the image with the predictions. Since we are working wi
 ```python
 import cv2
 from ultralytics import YOLO
-import supervision as sv
+import superv as sv
 
 model = YOLO("yolov8n.pt")
 image = cv2.imread("image.jpg")

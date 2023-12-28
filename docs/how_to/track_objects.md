@@ -9,7 +9,7 @@ example. You can do this using
 [`supervision[assets]`](https://supervision.roboflow.com/assets/) extension.
 
 ```python
-from supervision.assets import download_assets, VideoAssets
+from super.assets import download_assets, VideoAssets
 
 download_assets(VideoAssets.PEOPLE_WALKING)
 ```
@@ -65,7 +65,7 @@ enabling the continuous following of the object's motion path across different f
 
 ```{ .py hl_lines="6 12" }
 import numpy as np
-import supervision as sv
+import super as sv
 from ultralytics import YOLO
 
 model = YOLO("yolov8n.pt")
@@ -95,7 +95,7 @@ offering a clear visual representation of each object's class and unique identif
 
 ```{ .py hl_lines="8 15-19 23-24" }
 import numpy as np
-import supervision as sv
+import super as sv
 from ultralytics import YOLO
 
 model = YOLO("yolov8n.pt")
@@ -140,7 +140,7 @@ movement patterns and interactions between objects in the video.
 
 ```{ .py hl_lines="9 26-27" }
 import numpy as np
-import supervision as sv
+import super as sv
 from ultralytics import YOLO
 
 model = YOLO("yolov8n.pt")

@@ -1,3 +1,3 @@
 ## Classifications
 
-:::supervision.classification.core.Classifications
+:::super.classification.core.Classifications

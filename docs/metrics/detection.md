@@ -5,8 +5,8 @@
 
 ## ConfusionMatrix
 
-:::supervision.metrics.detection.ConfusionMatrix
+:::super.metrics.detection.ConfusionMatrix
 
 ## MeanAveragePrecision
 
-:::supervision.metrics.detection.MeanAveragePrecision
+:::super.metrics.detection.MeanAveragePrecision

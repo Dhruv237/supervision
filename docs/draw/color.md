@@ -1,7 +1,7 @@
 ## Color
 
-:::supervision.draw.color.Color
+:::super.draw.color.Color
 
 ## ColorPalette
 
-:::supervision.draw.color.ColorPalette
+:::super.draw.color.ColorPalette

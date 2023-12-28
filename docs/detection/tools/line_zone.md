@@ -1,3 +1,3 @@
 ## LineZone
 
-:::supervision.detection.line_counter.LineZone
+:::super.detection.line_counter.LineZone
