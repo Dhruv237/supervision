@@ -4,8 +4,8 @@ from typing import Optional, Tuple, Union
 import cv2
 import numpy as np
 
-from supervision.draw.color import Color
-from supervision.geometry.core import Point, Rect
+from super.draw.color import Color
+from super.geometry.core import Point, Rect
 
 
 def draw_line(
