@@ -1,6 +1,6 @@
 import numpy as np
 
-from super.geometry.core import Point
+from supervision.geometry.core import Point
 
 
 def get_polygon_center(polygon: np.ndarray) -> Point:
@@ -31,3 +31,4 @@ def get_polygon_center(polygon: np.ndarray) -> Point:
     """
     center = np.mean(polygon, axis=0).astype(int)
     return Point(x=center[0], y=center[1])
+

@@ -4,12 +4,12 @@ from typing import Optional, Tuple
 import cv2
 import numpy as np
 
-from super import Detections
-from super.detection.utils import clip_boxes, polygon_to_mask
-from super.draw.color import Color
-from super.draw.utils import draw_polygon, draw_text
-from super.geometry.core import Position
-from super.geometry.utils import get_polygon_center
+from supervision import Detections
+from supervision.detection.utils import clip_boxes, polygon_to_mask
+from supervision.draw.color import Color
+from supervision.draw.utils import draw_polygon, draw_text
+from supervision.geometry.core import Position
+from supervision.geometry.utils import get_polygon_center
 
 
 class PolygonZone:
@@ -137,3 +137,4 @@ class PolygonZoneAnnotator:
         )
 
         return annotated_frame
+

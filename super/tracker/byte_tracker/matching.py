@@ -3,7 +3,7 @@ from typing import List, Tuple
 import numpy as np
 from scipy.optimize import linear_sum_assignment
 
-from super.detection.utils import box_iou_batch
+from supervision.detection.utils import box_iou_batch
 
 
 def indices_to_matches(
@@ -62,3 +62,4 @@ def fuse_score(cost_matrix: np.ndarray, detections: List) -> np.ndarray:
     fuse_sim = iou_sim * det_scores
     fuse_cost = 1 - fuse_sim
     return fuse_cost
+

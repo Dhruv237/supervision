@@ -3,9 +3,9 @@ from typing import Callable, Optional, Tuple
 
 import numpy as np
 
-from super.detection.core import Detections, validate_inference_callback
-from super.detection.utils import move_boxes
-from super.utils.image import crop_image
+from supervision.detection.core import Detections, validate_inference_callback
+from supervision.detection.utils import move_boxes
+from supervision.utils.image import crop_image
 
 
 def move_detections(detections: Detections, offset: np.array) -> Detections:
@@ -179,3 +179,4 @@ class InferenceSlicer:
         offsets = np.stack([xmin, ymin, xmax, ymax], axis=-1).reshape(-1, 4)
 
         return offsets
+

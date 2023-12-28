@@ -6,13 +6,13 @@ from typing import Dict, List, Tuple
 import cv2
 import numpy as np
 
-from super.dataset.utils import (
+from supervision.dataset.utils import (
     approximate_mask_with_polygons,
     map_detections_class_id,
 )
-from super.detection.core import Detections
-from super.detection.utils import polygon_to_mask
-from super.utils.file import read_json_file, save_json_file
+from supervision.detection.core import Detections
+from supervision.detection.utils import polygon_to_mask
+from supervision.utils.file import read_json_file, save_json_file
 
 
 def coco_categories_to_classes(coco_categories: List[dict]) -> List[str]:
@@ -235,3 +235,4 @@ def save_coco_annotations(
         "annotations": coco_annotations,
     }
     save_json_file(annotation_dict, file_path=annotation_path)
+

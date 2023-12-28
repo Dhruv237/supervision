@@ -6,7 +6,7 @@ try:
 except importlib_metadata.PackageNotFoundError:
     __version__ = "development"
 
-from super.annotators.core import (
+from supervision.annotators.core import (
     BlurAnnotator,
     BoundingBoxAnnotator,
     BoxCornerAnnotator,
@@ -23,19 +23,19 @@ from super.annotators.core import (
     TraceAnnotator,
     TriangleAnnotator,
 )
-from super.annotators.utils import ColorLookup
-from super.classification.core import Classifications
-from super.dataset.core import (
+from supervision.annotators.utils import ColorLookup
+from supervision.classification.core import Classifications
+from supervision.dataset.core import (
     BaseDataset,
     ClassificationDataset,
     DetectionDataset,
 )
-from super.detection.annotate import BoxAnnotator
-from super.detection.core import Detections
-from super.detection.line_counter import LineZone, LineZoneAnnotator
-from super.detection.tools.inference_slicer import InferenceSlicer
-from super.detection.tools.polygon_zone import PolygonZone, PolygonZoneAnnotator
-from super.detection.utils import (
+from supervision.detection.annotate import BoxAnnotator
+from supervision.detection.core import Detections
+from supervision.detection.line_counter import LineZone, LineZoneAnnotator
+from supervision.detection.tools.inference_slicer import InferenceSlicer
+from supervision.detection.tools.polygon_zone import PolygonZone, PolygonZoneAnnotator
+from supervision.detection.utils import (
     box_iou_batch,
     calculate_masks_centroids,
     filter_polygons_by_area,
@@ -47,8 +47,8 @@ from super.detection.utils import (
     polygon_to_xyxy,
     scale_boxes,
 )
-from super.draw.color import Color, ColorPalette
-from super.draw.utils import (
+from supervision.draw.color import Color, ColorPalette
+from supervision.draw.utils import (
     calculate_dynamic_line_thickness,
     calculate_dynamic_text_scale,
     draw_filled_rectangle,
@@ -58,17 +58,18 @@ from super.draw.utils import (
     draw_rectangle,
     draw_text,
 )
-from super.geometry.core import Point, Position, Rect
-from super.geometry.utils import get_polygon_center
-from super.metrics.detection import ConfusionMatrix, MeanAveragePrecision
-from super.tracker.byte_tracker.core import ByteTrack
-from super.utils.file import list_files_with_extensions
-from super.utils.image import ImageSink, crop_image
-from super.utils.notebook import plot_image, plot_images_grid
-from super.utils.video import (
+from supervision.geometry.core import Point, Position, Rect
+from supervision.geometry.utils import get_polygon_center
+from supervision.metrics.detection import ConfusionMatrix, MeanAveragePrecision
+from supervision.tracker.byte_tracker.core import ByteTrack
+from supervision.utils.file import list_files_with_extensions
+from supervision.utils.image import ImageSink, crop_image
+from supervision.utils.notebook import plot_image, plot_images_grid
+from supervision.utils.video import (
     FPSMonitor,
     VideoInfo,
     VideoSink,
     get_video_frames_generator,
     process_video,
 )
+

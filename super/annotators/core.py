@@ -4,13 +4,13 @@ from typing import List, Optional, Tuple, Union
 import cv2
 import numpy as np
 
-from super.annotators.base import BaseAnnotator
-from super.annotators.utils import ColorLookup, Trace, resolve_color
-from super.detection.core import Detections
-from super.detection.utils import clip_boxes, mask_to_polygons
-from super.draw.color import Color, ColorPalette
-from super.draw.utils import draw_polygon
-from super.geometry.core import Position
+from supervision.annotators.base import BaseAnnotator
+from supervision.annotators.utils import ColorLookup, Trace, resolve_color
+from supervision.detection.core import Detections
+from supervision.detection.utils import clip_boxes, mask_to_polygons
+from supervision.draw.color import Color, ColorPalette
+from supervision.draw.utils import draw_polygon
+from supervision.geometry.core import Position
 
 
 class BoundingBoxAnnotator(BaseAnnotator):
@@ -1352,3 +1352,4 @@ class TriangleAnnotator(BaseAnnotator):
             cv2.fillPoly(scene, [vertices], color.as_bgr())
 
         return scene
+

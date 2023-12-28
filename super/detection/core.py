@@ -5,14 +5,14 @@ from typing import Any, Dict, Iterator, List, Optional, Tuple, Union
 
 import numpy as np
 
-from super.detection.utils import (
+from supervision.detection.utils import (
     calculate_masks_centroids,
     extract_ultralytics_masks,
     non_max_suppression,
     process_roboflow_result,
     xywh_to_xyxy,
 )
-from super.geometry.core import Position
+from supervision.geometry.core import Position
 
 
 def _validate_xyxy(xyxy: Any, n: int) -> None:
@@ -914,3 +914,4 @@ class Detections:
         )
         indices = non_max_suppression(predictions=predictions, iou_threshold=threshold)
         return self[indices]
+

@@ -4,7 +4,7 @@ from pathlib import Path
 from shutil import copyfileobj
 from typing import Union
 
-from super.assets.list import VIDEO_ASSETS, VideoAssets
+from supervision.assets.list import VIDEO_ASSETS, VideoAssets
 
 try:
     from requests import get
@@ -92,3 +92,4 @@ def download_assets(asset_name: Union[VideoAssets, str]) -> str:
         )
 
     return filename
+

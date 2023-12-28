@@ -3,9 +3,9 @@ from typing import Dict, Optional, Tuple
 import cv2
 import numpy as np
 
-from super.detection.core import Detections
-from super.draw.color import Color
-from super.geometry.core import Point, Rect, Vector
+from supervision.detection.core import Detections
+from supervision.draw.color import Color
+from supervision.geometry.core import Point, Rect, Vector
 
 
 class LineZone:
@@ -24,6 +24,7 @@ class LineZone:
             to inside.
         out_count (int): The number of objects that have crossed the line from inside
             to outside.
+        total_inside_count (int): The total count of objects currently inside the line.
     """
 
     def __init__(self, start: Point, end: Point):
@@ -36,8 +37,9 @@ class LineZone:
         self.tracker_state: Dict[str, bool] = {}
         self.in_count: int = 0
         self.out_count: int = 0
+        self.total_inside_count: int = 0
 
-    def trigger(self, detections: Detections) -> Tuple[np.ndarray, np.ndarray]:
+    def trigger(self, detections: Detections) -> Tuple[np.ndarray, np.ndarray, int]:
         """
         Update the `in_count` and `out_count` based on the objects that cross the line.
 
@@ -46,10 +48,10 @@ class LineZone:
                 counts.
 
         Returns:
-            A tuple of two boolean NumPy arrays. The first array indicates which
-                detections have crossed the line from outside to inside. The second
-                array indicates which detections have crossed the line from inside to
-                outside.
+            A tuple containing three elements:
+                - A boolean NumPy array indicating which detections have crossed the line from outside to inside.
+                - A boolean NumPy array indicating which detections have crossed the line from inside to outside.
+                - An integer representing the total count of objects currently inside the line.
         """
         crossed_in = np.full(len(detections), False)
         crossed_out = np.full(len(detections), False)
@@ -81,15 +83,24 @@ class LineZone:
 
             self.tracker_state[tracker_id] = tracker_state
             if tracker_state:
-                self.in_count += 1
-                crossed_in[i] = True
-            else:
                 self.out_count += 1
                 crossed_out[i] = True
+                self.total_inside_count -= 1  # Decrement total count when exiting
+            else:
+                self.in_count += 1
+                crossed_in[i] = True
+                self.total_inside_count += 1  # Increment total count when entering
 
-        return crossed_in, crossed_out
+        return crossed_in, crossed_out, self.total_inside_count
+    def update(self, detections: Detections) -> None:
+        """
+        Update the line counter based on the detections.
 
-
+        Args:
+            detections (Detections): A list of detections for which to update the
+                counts.
+        """
+        crossed_in, crossed_out = self.trigger(detections)
 class LineZoneAnnotator:
     def __init__(
         self,
@@ -166,9 +177,9 @@ class LineZoneAnnotator:
         )
 
         in_text = (
-            f"{self.custom_in_text}: {line_counter.in_count}"
+            f"{self.custom_in_text}: {line_counter.in_count}, Total Inside: {line_counter.total_inside_count}"
             if self.custom_in_text is not None
-            else f"in: {line_counter.in_count}"
+            else f"in: {line_counter.in_count}, Total Inside: {line_counter.total_inside_count}"
         )
         out_text = (
             f"{self.custom_out_text}: {line_counter.out_count}"
@@ -252,3 +263,4 @@ class LineZoneAnnotator:
             cv2.LINE_AA,
         )
         return frame
+

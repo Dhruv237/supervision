@@ -7,10 +7,10 @@ import cv2
 import numpy as np
 from defusedxml.ElementTree import fromstring, parse, tostring
 
-from super.dataset.utils import approximate_mask_with_polygons
-from super.detection.core import Detections
-from super.detection.utils import polygon_to_mask, polygon_to_xyxy
-from super.utils.file import list_files_with_extensions
+from supervision.dataset.utils import approximate_mask_with_polygons
+from supervision.detection.core import Detections
+from supervision.detection.utils import polygon_to_mask, polygon_to_xyxy
+from supervision.utils.file import list_files_with_extensions
 
 
 def object_to_pascal_voc(
@@ -282,3 +282,4 @@ def parse_polygon_points(polygon: Element) -> np.ndarray:
     return np.array(
         [(coordinates[i], coordinates[i + 1]) for i in range(0, len(coordinates), 2)]
     )
+

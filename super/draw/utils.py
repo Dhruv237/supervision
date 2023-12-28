@@ -4,8 +4,8 @@ from typing import Optional, Tuple, Union
 import cv2
 import numpy as np
 
-from super.draw.color import Color
-from super.geometry.core import Point, Rect
+from supervision.draw.color import Color
+from supervision.geometry.core import Point, Rect
 
 
 def draw_line(
@@ -269,3 +269,4 @@ def calculate_dynamic_line_thickness(resolution_wh: Tuple[int, int]) -> int:
         return 4
     else:
         return 4
+

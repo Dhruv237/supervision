@@ -2,10 +2,10 @@ from typing import List, Tuple
 
 import numpy as np
 
-from super.detection.core import Detections
-from super.tracker.byte_tracker import matching
-from super.tracker.byte_tracker.basetrack import BaseTrack, TrackState
-from super.tracker.byte_tracker.kalman_filter import KalmanFilter
+from supervision.detection.core import Detections
+from supervision.tracker.byte_tracker import matching
+from supervision.tracker.byte_tracker.basetrack import BaseTrack, TrackState
+from supervision.tracker.byte_tracker.kalman_filter import KalmanFilter
 
 
 class STrack(BaseTrack):
@@ -475,3 +475,4 @@ def remove_duplicate_tracks(tracks_a: List, tracks_b: List) -> Tuple[List, List]
     ]
 
     return result_a, result_b
+

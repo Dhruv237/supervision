@@ -7,8 +7,8 @@ from typing import Dict, List, Optional, Tuple, TypeVar
 import cv2
 import numpy as np
 
-from super.detection.core import Detections
-from super.detection.utils import (
+from supervision.detection.core import Detections
+from supervision.detection.utils import (
     approximate_polygon,
     filter_polygons_by_area,
     mask_to_polygons,
@@ -129,3 +129,4 @@ def train_test_split(
 
     split_index = int(len(data) * train_ratio)
     return data[:split_index], data[split_index:]
+
