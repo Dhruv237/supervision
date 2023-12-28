@@ -4,8 +4,8 @@ from typing import Dict, List, Optional, Tuple, TypeVar
 
 import pytest
 
-from supervision import Detections
-from supervision.dataset.utils import (
+from super import Detections
+from super.dataset.utils import (
     build_class_index_mapping,
     map_detections_class_id,
     merge_class_lists,

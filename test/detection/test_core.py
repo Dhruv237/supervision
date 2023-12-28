@@ -5,8 +5,8 @@ from typing import List, Optional, Union
 import numpy as np
 import pytest
 
-from supervision.detection.core import Detections
-from supervision.geometry.core import Position
+from super.detection.core import Detections
+from super.geometry.core import Position
 
 PREDICTIONS = np.array(
     [

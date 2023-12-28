@@ -3,7 +3,7 @@ from typing import List, Tuple
 import numpy as np
 from scipy.optimize import linear_sum_assignment
 
-from supervision.detection.utils import box_iou_batch
+from super.detection.utils import box_iou_batch
 
 
 def indices_to_matches(

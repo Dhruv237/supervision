@@ -5,7 +5,7 @@ from typing import List, Optional
 import numpy as np
 import pytest
 
-from supervision import DetectionDataset
+from super import DetectionDataset
 
 
 @pytest.mark.parametrize(

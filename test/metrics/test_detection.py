@@ -5,8 +5,8 @@ from typing import Optional, Union
 import numpy as np
 import pytest
 
-from supervision.detection.core import Detections
-from supervision.metrics.detection import (
+from super.detection.core import Detections
+from super.metrics.detection import (
     ConfusionMatrix,
     MeanAveragePrecision,
     detections_to_tensor,

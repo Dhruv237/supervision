@@ -3,9 +3,9 @@ from typing import Optional, Union
 
 import numpy as np
 
-from supervision.detection.core import Detections
-from supervision.draw.color import Color, ColorPalette
-from supervision.geometry.core import Position
+from super.detection.core import Detections
+from super.draw.color import Color, ColorPalette
+from super.geometry.core import Position
 
 
 class ColorLookup(Enum):

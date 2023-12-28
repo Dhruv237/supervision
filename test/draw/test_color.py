@@ -3,7 +3,7 @@ from typing import Optional
 
 import pytest
 
-from supervision.draw.color import Color
+from super.draw.color import Color
 
 
 @pytest.mark.parametrize(

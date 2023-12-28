@@ -3,9 +3,9 @@ from typing import Dict, Optional, Tuple
 import cv2
 import numpy as np
 
-from supervision.detection.core import Detections
-from supervision.draw.color import Color
-from supervision.geometry.core import Point, Rect, Vector
+from super.detection.core import Detections
+from super.draw.color import Color
+from super.geometry.core import Point, Rect, Vector
 
 
 class LineZone:

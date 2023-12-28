@@ -9,28 +9,28 @@ from typing import Dict, Iterator, List, Optional, Tuple
 import cv2
 import numpy as np
 
-from supervision.classification.core import Classifications
-from supervision.dataset.formats.coco import (
+from super.classification.core import Classifications
+from super.dataset.formats.coco import (
     load_coco_annotations,
     save_coco_annotations,
 )
-from supervision.dataset.formats.pascal_voc import (
+from super.dataset.formats.pascal_voc import (
     detections_to_pascal_voc,
     load_pascal_voc_annotations,
 )
-from supervision.dataset.formats.yolo import (
+from super.dataset.formats.yolo import (
     load_yolo_annotations,
     save_data_yaml,
     save_yolo_annotations,
 )
-from supervision.dataset.utils import (
+from super.dataset.utils import (
     build_class_index_mapping,
     map_detections_class_id,
     merge_class_lists,
     save_dataset_images,
     train_test_split,
 )
-from supervision.detection.core import Detections
+from super.detection.core import Detections
 
 
 @dataclass

@@ -7,10 +7,10 @@ import cv2
 import numpy as np
 from defusedxml.ElementTree import fromstring, parse, tostring
 
-from supervision.dataset.utils import approximate_mask_with_polygons
-from supervision.detection.core import Detections
-from supervision.detection.utils import polygon_to_mask, polygon_to_xyxy
-from supervision.utils.file import list_files_with_extensions
+from super.dataset.utils import approximate_mask_with_polygons
+from super.detection.core import Detections
+from super.detection.utils import polygon_to_mask, polygon_to_xyxy
+from super.utils.file import list_files_with_extensions
 
 
 def object_to_pascal_voc(

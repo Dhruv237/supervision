@@ -1,6 +1,6 @@
 import numpy as np
 
-from supervision.geometry.core import Point
+from super.geometry.core import Point
 
 
 def get_polygon_center(polygon: np.ndarray) -> Point:

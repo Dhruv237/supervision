@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 import numpy as np
 
-from supervision.detection.core import Detections
+from super.detection.core import Detections
 
 
 class BaseAnnotator(ABC):

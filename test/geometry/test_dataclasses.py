@@ -1,6 +1,6 @@
 import pytest
 
-from supervision.geometry.core import Point, Vector
+from super.geometry.core import Point, Vector
 
 
 @pytest.mark.parametrize(

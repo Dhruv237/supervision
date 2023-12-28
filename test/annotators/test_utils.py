@@ -5,8 +5,8 @@ from typing import Optional
 import numpy as np
 import pytest
 
-from supervision.annotators.utils import ColorLookup, resolve_color_idx
-from supervision.detection.core import Detections
+from super.annotators.utils import ColorLookup, resolve_color_idx
+from super.detection.core import Detections
 
 
 @pytest.mark.parametrize(

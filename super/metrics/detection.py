@@ -7,9 +7,9 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 
-from supervision.dataset.core import DetectionDataset
-from supervision.detection.core import Detections
-from supervision.detection.utils import box_iou_batch
+from super.dataset.core import DetectionDataset
+from super.detection.core import Detections
+from super.detection.utils import box_iou_batch
 
 
 def detections_to_tensor(

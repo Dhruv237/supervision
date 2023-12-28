@@ -4,7 +4,7 @@ from typing import Optional, Tuple
 import numpy as np
 import pytest
 
-from supervision.classification.core import Classifications
+from super.classification.core import Classifications
 
 
 @pytest.mark.parametrize(

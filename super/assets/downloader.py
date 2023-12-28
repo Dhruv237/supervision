@@ -4,7 +4,7 @@ from pathlib import Path
 from shutil import copyfileobj
 from typing import Union
 
-from supervision.assets.list import VIDEO_ASSETS, VideoAssets
+from super.assets.list import VIDEO_ASSETS, VideoAssets
 
 try:
     from requests import get

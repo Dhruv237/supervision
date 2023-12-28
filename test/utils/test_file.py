@@ -4,7 +4,7 @@ from typing import List, Optional
 
 import pytest
 
-from supervision.utils.file import read_txt_file
+from super.utils.file import read_txt_file
 
 FILE_1_CONTENT = """Line 1
 Line 2

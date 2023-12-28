@@ -4,7 +4,7 @@ from typing import List, Optional, Tuple
 import numpy as np
 import pytest
 
-from supervision.detection.utils import (
+from super.detection.utils import (
     calculate_masks_centroids,
     clip_boxes,
     filter_polygons_by_area,
